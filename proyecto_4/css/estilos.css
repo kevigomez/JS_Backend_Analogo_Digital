@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 26, 33);
+}
+
+.reloj-digital{
+    position: absolute;
+    font-family: "monospace";
+    font-size: 2rem;
+    color: rgb(255, 0, 255);
+    text-align: center;
+    justify-content: center;
+    border: 0.2rem solid rgb(255, 0, 255);
+    box-shadow: inset 0px 0px 8px 2px rgb(223, 62, 255) ;
+    border-radius: 2vh;
+    font-size: 4vh;
+    padding: 5px;
+    margin-top: 40%; 
+    z-index: 16;
+}
+
+#reloj-digital-content {
+    display: inline-block;
+}
+
+#am-pm {
+    font-size: 1rem;
+}
+/* Estilos para el reloj analógico */
+.reloj-analogico {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/img/reloj.png");
+    background-size: cover;
+    border: 1rem solid rgb(212, 0, 255) ;
+    border-radius: 50vh;
+    box-shadow: inset 0px 0px 15px 5px rgb(223, 62, 255) ;
+}
+.reloj-analogico::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(205, 45, 197);
+    border-radius: 50vh;
+    z-index: 10000;
+}
+
+.horas{
+    width: 150px;
+    height: 150px;
+}
+.minutos{
+    width: 190px;
+    height: 190px;
+}
+.segundos{
+    width: 250px;
+    height: 250px;
+}
+
+
+.horas::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 90px;
+    background-color: antiquewhite;
+    z-index: 10;
+    border-radius: 50vh;
+}
+
+.minutos::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 110px;
+    background-color: rgb(255, 177, 74);
+    z-index: 11;
+    border-radius: 50vh;
+}
+
+.segundos::before {
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 150px;
+    background-color: rgb(96, 250, 255);
+    z-index: 12;
+    border-radius: 50vh;
+}
+.horas,.minutos,.segundos{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-bottom: 50vh;
+}
